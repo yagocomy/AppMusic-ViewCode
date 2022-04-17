@@ -74,7 +74,7 @@ class CardActionView: UIView {
          button.backgroundColor = .white
          button.translatesAutoresizingMaskIntoConstraints = false
          button.layer.cornerRadius = 35
-         button.setBackgroundImage(UIImage(named: "playbtn")?.withRenderingMode(.alwaysTemplate), for: .normal)
+         button.setBackgroundImage(UIImage(named: "playBtn")?.withRenderingMode(.alwaysTemplate), for: .normal)
          button.tintColor = .black
          button.clipsToBounds = true
          return button

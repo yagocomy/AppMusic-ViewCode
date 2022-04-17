@@ -35,7 +35,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        let vC = DetailViewController()
+        vC.cardModel = CardData[indexPath.row]
+        vC.modalPresentationStyle = .fullScreen
+        present(vC, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

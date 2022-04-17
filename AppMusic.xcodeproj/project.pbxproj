@@ -20,6 +20,8 @@
 		A0881DEC27BDA5060034BCAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0881DEB27BDA5060034BCAB /* HomeViewController.swift */; };
 		A0881DF127BDA5060034BCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0881DF027BDA5060034BCAB /* Assets.xcassets */; };
 		A0881DF427BDA5060034BCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0881DF227BDA5060034BCAB /* LaunchScreen.storyboard */; };
+		A0B2386B280B853800E0082F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2386A280B853800E0082F /* DetailViewController.swift */; };
+		A0B2386E280B856900E0082F /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2386D280B856900E0082F /* DetailViewControllerScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A0881DF027BDA5060034BCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0881DF327BDA5060034BCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0881DF527BDA5060034BCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0B2386A280B853800E0082F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A0B2386D280B856900E0082F /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,15 +129,33 @@
 				A002968D27C172B600254E19 /* CustomView */,
 				A002968727C16EC200254E19 /* Model */,
 				A002967B27C1559A00254E19 /* Extension */,
-				A0881DE727BDA5060034BCAB /* AppDelegate.swift */,
-				A0881DE927BDA5060034BCAB /* SceneDelegate.swift */,
 				A002968327C156F500254E19 /* Home */,
 				A002968A27C1713700254E19 /* Cell */,
+				A0B23869280B835200E0082F /* DetailViewController */,
 				A0881DF027BDA5060034BCAB /* Assets.xcassets */,
+				A0881DE727BDA5060034BCAB /* AppDelegate.swift */,
+				A0881DE927BDA5060034BCAB /* SceneDelegate.swift */,
 				A0881DF227BDA5060034BCAB /* LaunchScreen.storyboard */,
 				A0881DF527BDA5060034BCAB /* Info.plist */,
 			);
 			path = AppMusic;
+			sourceTree = "<group>";
+		};
+		A0B23869280B835200E0082F /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0B2386A280B853800E0082F /* DetailViewController.swift */,
+				A0B2386C280B855100E0082F /* Screen */,
+			);
+			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		A0B2386C280B855100E0082F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A0B2386D280B856900E0082F /* DetailViewControllerScreen.swift */,
+			);
+			name = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B2386E280B856900E0082F /* DetailViewControllerScreen.swift in Sources */,
 				A002968C27C1716200254E19 /* CardViewTableViewCell.swift in Sources */,
 				A002967F27C1562600254E19 /* UIView.swift in Sources */,
 				A0881DEC27BDA5060034BCAB /* HomeViewController.swift in Sources */,
+				A0B2386B280B853800E0082F /* DetailViewController.swift in Sources */,
 				A0881DE827BDA5060034BCAB /* AppDelegate.swift in Sources */,
 				A002968527C1572200254E19 /* HomeViewControllerScreen.swift in Sources */,
 				A002968927C16EE300254E19 /* CardViewModel.swift in Sources */,

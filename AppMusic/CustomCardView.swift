@@ -119,6 +119,12 @@ class CustomCardView: UIView {
        return label
     }()
     
+    lazy var actionsView: CardActionView = {
+       let v = CardActionView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
     //MARK: - Init
     init(){
     let frame = CGRect.zero
@@ -144,6 +150,7 @@ class CustomCardView: UIView {
         self.cardContainerView.addSubview(self.cardTitle)
         self.cardContainerView.addSubview(self.likeAndTimeLabel)
         self.cardContainerView.addSubview(self.descriptionTitleLabel)
+        self.cardContainerView.addSubview(self.actionsView)
         self.updateLayout(for: self.vmode ?? .card)
     }
     
@@ -193,7 +200,12 @@ class CustomCardView: UIView {
                                      
                                      self.descriptionTitleLabel.topAnchor.constraint(equalTo: self.likeAndTimeLabel.bottomAnchor,constant: 30),
                                      self.descriptionTitleLabel.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 40),
-                                     self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant:  -40)
+                                     self.descriptionTitleLabel.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant:  -40),
+                                     
+                                     self.actionsView.bottomAnchor.constraint(equalTo: self.cardContainerView.bottomAnchor, constant: -20),
+                                     self.actionsView.leadingAnchor.constraint(equalTo: self.cardContainerView.leadingAnchor, constant: 20),
+                                     self.actionsView.trailingAnchor.constraint(equalTo: self.cardContainerView.trailingAnchor, constant: -20),
+                                     self.actionsView.heightAnchor.constraint(equalToConstant: 80)
                                     ])
     }
     
@@ -211,6 +223,7 @@ class CustomCardView: UIView {
             self.containerBottomConstraints?.constant = -15
             self.descriptionTitleLabel.isHidden = true
         }
+        self.actionsView.updateLayout(for: mode)
     }
     
     public func setupView(data: CardViewModel){
